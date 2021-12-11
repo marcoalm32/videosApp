@@ -1,0 +1,11 @@
+@import '../stylus.scss';
+$font-default: 600 1rem 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+h1 {
+  font-family: $font-default;
+  color: $dark-font;
+}
+
+img {
+  border-radius: 50%;
+}
