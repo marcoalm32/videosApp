@@ -1,14 +1,32 @@
 @import '../stylus.scss';
 ion-item {
+
+  --padding-start: 10px;
+  --inner-padding-end: 10px;
   ion-thumbnail {
     height: 100%;
+    margin-inline-end: 10px;
   }
 
   h1 {
-    font: $font-default;
+    @include font-stylus(
+      600 0.8rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
+      #222
+      );
   }
 
   p {
-    font: $font-default;
+    @include font-stylus(
+      600 0.6rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
+      #222
+    );
+  }
+
+  p+p {
+    color: #8a8a8a;
+  }
+
+  ion-chip {
+    padding-inline: 3px;
   }
 }

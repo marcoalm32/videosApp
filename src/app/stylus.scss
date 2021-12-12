@@ -4,7 +4,10 @@
 $dark-font: #222;
 $light-font: #e9e1e1;
 $font-default: 500 0.8rem 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+@mixin font-stylus($font, $color) {
+  font: $font;
+  color: $color;
+}
 
 //backgrounds:
 $background-dark: #222;
