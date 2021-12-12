@@ -1,0 +1,14 @@
+@import '../stylus.scss';
+ion-item {
+  ion-thumbnail {
+    height: 100%;
+  }
+
+  h1 {
+    font: $font-default;
+  }
+
+  p {
+    font: $font-default;
+  }
+}
