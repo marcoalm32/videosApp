@@ -1,3 +1,5 @@
+import { listMovies } from './../shared/data/list.movies';
+import { IMovie } from './../shared/models/movie.model';
 import { Component } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
 import { toastController } from '@ionic/core';
@@ -9,8 +11,12 @@ import { toastController } from '@ionic/core';
 })
 export class Tab1Page {
 
+  title = 'Videos';
+  movieList: Array<IMovie> = listMovies;
+
   constructor(
     private alertController: AlertController,
+    // eslint-disable-next-line @typescript-eslint/no-shadow
     private toastController: ToastController
   ) {}
 

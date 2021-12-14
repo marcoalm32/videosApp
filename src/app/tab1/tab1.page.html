@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
     <ion-title>
-      Videos App
+      {{ title }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,53 +11,29 @@
 
   <ion-list>
 
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let movie of movieList">
       <ion-item lines="full">
         <ion-thumbnail>
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6vVRYbIjDLMMwZJ2jo6enrdN76U.jpg" />
+          <img [src]="movie.img" alt="logo movie" />
         </ion-thumbnail>
 
         <ion-label class="ion-text-wrap ion-padding-start">
           <div>
-            <h1>Homem-Aranha: Sem Volta Para Casa (2021)</h1>
-            <p>16/12/2021 (BR) - 2h 30m</p>
-            <p>Ação, Aventura, Ficção científica</p>
+            <h1> {{ movie.name }}</h1>
+            <p> {{ movie.release }} - {{ movie.time }}</p>
+            <ion-badge color='light' *ngFor="let g of movie.genre">
+              {{ g }}
+            </ion-badge>
           </div>
         </ion-label>
 
         <ion-chip color="success" outline>
-          <ion-label>76%</ion-label>
+          <ion-label> {{ movie.classification }}</ion-label>
         </ion-chip>
       </ion-item>
 
       <ion-item-options side="end">
         <ion-item-option color="laranja"(click)="showFavoriteAlert()">
-          <ion-icon slot="icon-only" name="star"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-    </ion-item-sliding>
-
-    <ion-item-sliding>
-      <ion-item lines="full">
-        <ion-thumbnail>
-          <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/44aCR6cjH0FbzW6PMw3Ega178iW.jpg" />
-        </ion-thumbnail>
-
-        <ion-label class="ion-text-wrap ion-padding-start">
-          <div>
-            <h1>Mortal Kombat (2021)</h1>
-            <p>15/04/2021 (BR) - 1h 50m</p>
-            <p>Ação, Fantasia, Aventura</p>
-          </div>
-        </ion-label>
-
-        <ion-chip color="success" outline>
-          <ion-label>73%</ion-label>
-        </ion-chip>
-      </ion-item>
-
-      <ion-item-options side="end">
-        <ion-item-option color="laranja" (click)="showFavoriteAlert()">
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>

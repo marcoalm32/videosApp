@@ -15,7 +15,7 @@ ion-item {
       );
   }
 
-  p {
+  p, ion-badge {
     @include font-stylus(
       600 0.6rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
       #222
