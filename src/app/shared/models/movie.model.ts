@@ -5,4 +5,5 @@ export interface IMovie {
   classification: number;
   img: string;
   genre: string[];
+  page?: string;
 }

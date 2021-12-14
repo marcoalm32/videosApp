@@ -12,7 +12,7 @@
   <ion-list>
 
     <ion-item-sliding *ngFor="let movie of movieList">
-      <ion-item lines="full">
+      <ion-item lines="full" [routerLink]="movie.page">
         <ion-thumbnail>
           <img [src]="movie.img" alt="logo movie" />
         </ion-thumbnail>

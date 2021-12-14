@@ -5,7 +5,8 @@ export const listMovies = [
     time: '2h 30m',
     classification: 76,
     img: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6vVRYbIjDLMMwZJ2jo6enrdN76U.jpg',
-    genre: ['Ação', 'Aventura', 'Ficção Científica']
+    genre: ['Ação', 'Aventura', 'Ficção Científica'],
+    page: '/homem-aranha'
   },
   {
     name: 'Mortal Kombat (2021)',
@@ -13,7 +14,8 @@ export const listMovies = [
     time: '1h 50m',
     classification: 73,
     img: 'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/44aCR6cjH0FbzW6PMw3Ega178iW.jpg',
-    genre: ['Ação', 'Fantasia', 'Aventura']
+    genre: ['Ação', 'Fantasia', 'Aventura'],
+    page: '/mortal-kombat'
   },
   {
     name: 'Resident Evil: Bem-Vindo a Raccoon City (2021)',
