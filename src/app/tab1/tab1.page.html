@@ -11,24 +11,24 @@
 
   <ion-list>
 
-    <ion-item-sliding *ngFor="let movie of movieList">
-      <ion-item lines="full" [routerLink]="movie.page">
+    <ion-item-sliding *ngFor='let movie of movieList'>
+      <ion-item lines='full' (click)='showMovie(movie)'>
         <ion-thumbnail>
-          <img [src]="movie.img" alt="logo movie" />
+          <img [src]="movie.img" alt='logo movie' />
         </ion-thumbnail>
 
-        <ion-label class="ion-text-wrap ion-padding-start">
+        <ion-label class='ion-text-wrap ion-padding-start'>
           <div>
-            <h1> {{ movie.name }}</h1>
-            <p> {{ movie.release }} - {{ movie.time }}</p>
-            <ion-badge color='light' *ngFor="let g of movie.genre">
+            <h1> {{ movie.name }} </h1>
+            <p> {{ movie.release }} - {{ movie.time }} </p>
+            <ion-badge color='light' *ngFor='let g of movie.genre'>
               {{ g }}
             </ion-badge>
           </div>
         </ion-label>
 
         <ion-chip color="success" outline>
-          <ion-label> {{ movie.classification }}</ion-label>
+          <ion-label> {{ movie.classification }}% </ion-label>
         </ion-chip>
       </ion-item>
 

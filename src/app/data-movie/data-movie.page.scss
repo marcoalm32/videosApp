@@ -1,0 +1,13 @@
+@import './../stylus.scss';
+
+h1, .btn {
+  @include font-stylus(
+    600 0.8rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
+     #222 );
+}
+
+p, ion-badge {
+  @include font-stylus(
+    500 0.7rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
+     #222 );
+}

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,10 @@ export class DataService {
 
   constructor() { }
 
-  saveData(index: string, data: any): boolean {
+  saveData(index: string, data: any): boolean{
     if(index){
-        this.data[index] = data;
-        return true;
+      this.data[index] = data;
+      return true;
     }else {
       return false;
     }
@@ -20,7 +21,7 @@ export class DataService {
 
   getData(index: string): any {
     if(index){
-      return this.data[index]
+      return this.data[index];
     }else{
       return null;
     }

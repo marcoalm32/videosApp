@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'mortal-kombat',
     loadChildren: () => import('./filmes/mortal-kombat/mortal-kombat.module').then( m => m.MortalKombatPageModule)
+  },
+  {
+    path: 'data-movie',
+    loadChildren: () => import('./data-movie/data-movie.module').then( m => m.DataMoviePageModule)
   }
 ];
 @NgModule({
