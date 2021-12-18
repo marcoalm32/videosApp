@@ -6,11 +6,19 @@ ion-item {
   ion-thumbnail {
     height: 100%;
     margin-inline-end: 10px;
+
+    ion-icon {
+      font-size: 48px
+    }
+  }
+
+  .no-movies {
+    font: 800 1rem $font-default;
   }
 
   h1 {
     @include font-stylus(
-      600 0.8rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
+      600 0.8rem $font-default,
       #222
       );
   }
@@ -27,6 +35,12 @@ ion-item {
   }
 
   ion-chip {
-    padding-inline: 3px;
+    padding-inline: 0;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    justify-content: center;
+    border-width: 3px;
   }
+
 }

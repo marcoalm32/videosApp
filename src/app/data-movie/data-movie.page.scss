@@ -1,6 +1,6 @@
 @import './../stylus.scss';
 
-h1, .btn {
+h1 {
   @include font-stylus(
     600 0.8rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
      #222 );
@@ -10,4 +10,17 @@ p, ion-badge {
   @include font-stylus(
     500 0.7rem ('Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif),
      #222 );
+}
+
+ion-icon {
+  font-size: 100px;
+  color: #dcdcdc;
+}
+
+ion-chip {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    justify-content: center;
+    border-width: 3px;
 }

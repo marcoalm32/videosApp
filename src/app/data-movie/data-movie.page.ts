@@ -1,5 +1,6 @@
+import { GenreService } from './../shared/services/genre.service';
+import { ImovieApi } from './../shared/models/movieApi.model';
 import { Router } from '@angular/router';
-import { IMovie } from './../shared/models/movie.model';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/services/data.service';
 
@@ -10,15 +11,29 @@ import { DataService } from '../shared/services/data.service';
 })
 export class DataMoviePage implements OnInit {
 
-  movie: IMovie;
+  movie: ImovieApi;
   textBack = 'Voltar';
+  genres: string[] = [];
   constructor(
     private dataService: DataService,
     private route: Router,
+    private genreService: GenreService,
   ) { }
 
   ngOnInit() {
     this.getMovie();
+
+    this.getGenres();
+  }
+
+  getGenres() {
+    this.genreService.searchGenres().subscribe(
+      (data) => {
+        data.genres.forEach(genre => {
+          this.genres[genre.id] = genre.name;
+        });
+      }
+    );
   }
 
   getMovie() {
